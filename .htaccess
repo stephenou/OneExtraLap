@@ -1,0 +1,9 @@
+RewriteEngine on 
+RewriteBase /
+RewriteCond $1 !^(index\.php|extras|robots\.txt)  
+RewriteRule ^(.*)$ index.php/$1 [L] 
+
+#Options +FollowSymlinks
+#RewriteEngine on
+#RewriteCond %{REQUEST_URI} !/index.html$ 
+#RewriteRule $ /index.html [R=302,L]
